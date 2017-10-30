@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_point"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sisillia.bikebank.MyPoint">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="#004153"
+        android:gravity="right"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 Poin"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Poin"
+            android:textSize="16dp"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="19dp"
+        android:paddingRight="16dp">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date/Time"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="55dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdrawal"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24/06/2017"
+                android:textSize="15dp"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(No Witdraw)"
+                android:textSize="15dp"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500"
+                android:textSize="15dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27/07/2017"
+                android:textSize="15dp"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(No Witdraw)"
+                android:textSize="15dp"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="900"
+                android:textSize="15dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/07/2017"
+                android:textSize="15dp"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(No Witdraw)"
+                android:textSize="15dp"/>
+
+            <android.support.v4.widget.Space
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000"
+                android:textSize="15dp"/>
+
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

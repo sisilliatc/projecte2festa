@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sisillia.bikebank" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MyCycle"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Splashscreen"
+            android:label="MyCycle"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register" />
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/title_activity_main_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyAccount"
+            android:label="My Account"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainMenu" />
+        </activity>
+        <activity
+            android:name=".MyPoint"
+            android:label="My Point"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainMenu" />
+        </activity>
+        <activity
+            android:name=".History"
+            android:label="History"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainMenu" />
+        </activity>
+        <activity
+            android:name=".MyCondition"
+            android:label="My Condition"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainMenu" />
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="History"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainMenu" />
+        </activity>
+        <activity android:name=".workoutsugesstion" />
+        <activity android:name=".HealthAnalyzer" />
+        <activity android:name=".HeartPulseMonitoring" />
+        <activity android:name=".NearestNeighbour" >
+        </activity>
+    </application>
+
+</manifest>

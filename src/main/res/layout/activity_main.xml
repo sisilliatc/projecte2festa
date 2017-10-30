@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/screenlogin"
+    tools:context="com.example.sisillia.bikebank.MainActivity">
+
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="475px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+
+
+        <EditText
+            android:layout_width="450px"
+            android:height="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:drawableLeft="@drawable/user"
+            android:hint="Username"
+            android:textStyle="bold"
+            android:textColorHint="#ffffff"
+            android:background="@drawable/edittextstyle"
+            android:paddingTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:id="@+id/field_email"
+            android:textSize="12dp"
+            android:textColor="#E1FFFF" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center">
+
+
+
+        <EditText
+            android:layout_width="450px"
+            android:height="60dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="password"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/lock"
+            android:textColorHint="#ffff"
+            android:textSize="12dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            android:id="@+id/field_password"
+            android:background="@drawable/edittextstyle"
+            android:textColor="#E1FFFF"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:text="Login"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:id="@+id/loginbt"
+            android:textAllCaps="false"
+            android:background="@drawable/button"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="45px" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Member?"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Sign Up!"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#FFFA0D"
+            android:id="@+id/signup"/>
+    </LinearLayout>
+</LinearLayout>

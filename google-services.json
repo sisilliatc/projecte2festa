@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "599074857949",
+    "firebase_url": "https://mycycle-5b851.firebaseio.com",
+    "project_id": "mycycle-5b851",
+    "storage_bucket": "mycycle-5b851.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599074857949:android:8b8e53d24da7487d",
+        "android_client_info": {
+          "package_name": "com.example.sisillia.bikebank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599074857949-fijsoqmme356e342hedvsodf5kvg9m8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sisillia.bikebank",
+            "certificate_hash": "0e70178988d5a38f0adb4370cdf77eed604083d5"
+          }
+        },
+        {
+          "client_id": "599074857949-5ddias4i7qkvvtkukbs7qh2n56qleql5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQFukk0s_Pd0yNyvDb1PBalBC_RQ1bvsU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599074857949-5ddias4i7qkvvtkukbs7qh2n56qleql5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

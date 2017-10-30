@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sisillia.bikebank.MainMenu"
+    tools:showIn="@layout/app_bar_main_menu">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+     android:background="#5DC3DF"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 500,-"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#004153"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Poin"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="#004153"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#004153">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exercise Time"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connected"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Device"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Bike Serial Number"
+            android:textAlignment="center"/>
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pair"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

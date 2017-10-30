@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/screenlogin"
+    tools:context="com.example.sisillia.bikebank.Register">
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="455px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="490px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Username"
+            android:textColorHint="#ffff"
+            android:ems="10"
+            android:background="@drawable/edittextstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:id="@+id/field_Rusername"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="490px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Email"
+            android:textColorHint="#ffff"
+            android:background="@drawable/edittextstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:id="@+id/field_Remail"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="490px"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Age"
+            android:textColorHint="#ffff"
+            android:background="@drawable/edittextstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:id="@+id/field_Rage"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="490px"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Gender (1=male, 0=female)"
+            android:textColorHint="#ffff"
+            android:background="@drawable/edittextstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:id="@+id/field_gender"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:paddingBottom="5dp"
+       android:paddingTop="5dp">
+
+       <EditText
+           android:layout_width="490px"
+           android:layout_height="wrap_content"
+           android:inputType="textPassword"
+           android:ems="10"
+           android:background="@drawable/edittextstyle"
+           android:paddingBottom="10dp"
+           android:paddingTop="10dp"
+           android:id="@+id/field_Rpass"
+           android:hint="password"
+           android:textColorHint="#ffff"
+           android:textAlignment="center"
+           android:textColor="#E1FFFF"
+           android:textStyle="bold"
+           android:textSize="13dp"/>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:paddingBottom="5dp"
+       android:paddingTop="5dp">
+
+       <EditText
+           android:layout_width="490px"
+           android:layout_height="wrap_content"
+           android:inputType="textPassword"
+           android:ems="10"
+           android:background="@drawable/edittextstyle"
+           android:paddingBottom="10dp"
+           android:paddingTop="10dp"
+           android:id="@+id/field_Rpass1"
+           android:hint="retype-password"
+           android:textColorHint="#ffff"
+           android:textAlignment="center"
+           android:textColor="#E1FFFF"
+           android:textStyle="bold"
+           android:textSize="13dp"/>
+
+   </LinearLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:paddingTop="10dp"
+       android:paddingBottom="16dp">
+
+       <Button
+           android:layout_width="210dp"
+           android:layout_height="40dp"
+           android:textStyle="bold"
+           android:textAlignment="center"
+           android:text="Sign up"
+           android:gravity="center"
+           android:textColor="#ffff"
+           android:id="@+id/regis"
+           android:background="@drawable/button"
+           android:textSize="18dp"
+           android:textAllCaps="false"/>
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to login"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#BBBFD4"
+            android:id="@+id/backlogin"
+            />
+    </LinearLayout>
+</LinearLayout>
