@@ -8,8 +8,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.sisillia.bikebank.volley.VolleyCallback;
+import com.example.sisillia.bikebank.volley.VolleyHelper;
+
+import org.json.JSONException;
 
 public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +35,18 @@ public class MainMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        VolleyHelper vh = new VolleyHelper();
+        try {
+            vh.getSakit(new VolleyCallback() {
+                @Override
+                public void onSuccess(String result) {
+                    Log.d("volley sisil",result);
+                }
+            },"a","b");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 
