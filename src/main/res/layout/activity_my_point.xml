@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.sisillia.bikebank.MyPoint">
+    tools:context="com.example.sisillia.bikebank.MyPoint"
+    android:theme="@style/AppTheme.AppBarOverlay">
     
     <LinearLayout
         android:layout_width="match_parent"

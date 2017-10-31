@@ -66,30 +66,17 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:gravity="center"
-        android:paddingRight="16dp">
+        android:paddingRight="16dp"
+        android:background="@drawable/textviewstyle"
+        android:id="@+id/condition_ws">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Workout Sugesstion"
-            android:textSize="18dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:gravity="center"
-        android:paddingRight="16dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Health Analyzer"
-            android:textSize="18dp"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#2D4671"
             />
 
     </LinearLayout>
@@ -101,13 +88,38 @@
         android:paddingLeft="16dp"
         android:gravity="center"
         android:paddingRight="16dp"
+        android:id="@+id/condition_ha"
+        android:background="@drawable/textviewstyle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Health Analyzer"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#2D4671"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:gravity="center"
+        android:paddingRight="16dp"
+        android:id="@+id/condition_hpm"
+        android:background="@drawable/textviewstyle"
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Heart Pulse Monitoring"
-            android:textSize="18dp" />
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#2D4671"/>
 
     </LinearLayout>
 

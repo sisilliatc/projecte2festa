@@ -34,9 +34,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+
+//import com.google.firebase.quickstart.database.models.User;
+//import com.google.firebase.quickstart.database.models.Comment;
+//import com.google.firebase.quickstart.database.models.Post;
+
+///////////////////////////////////////////////////////////////
 
 public class Register extends Activity implements
         View.OnClickListener {
+
+    private DatabaseReference mDatabase;
+
     private static final String TAG = "Register";
 
      EditText mRusename;
@@ -72,6 +82,21 @@ public class Register extends Activity implements
         // [END initialize_auth]
     }
 
+//    mDatabase.child(ricky).addValueEventListener(new ValueEventListener() {
+//        @Override
+//        public void onDataChange(DataSnapshot dataSnapshot) {
+//
+//            User user = dataSnapshot.getValue(User.class);
+//
+//            Log.d(TAG, "User name: " + user.getName() + ", email " + user.getEmail());
+//        }
+//
+//        @Override
+//        public void onCancelled(DatabaseError error) {
+//            // Failed to read value
+//            Log.w(TAG, "Failed to read value.", error.toException());
+//        }
+//    });
 
     private void createAccount(String email, String password) {
         Log.d(TAG, "createAccount:" + email);

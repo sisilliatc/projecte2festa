@@ -31,9 +31,9 @@
             android:layout_height="10dp" />
 
         <TextView
+            android:id="@+id/poin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 Poin"
             android:textStyle="bold"
             android:textSize="17dp"
             android:textColor="#004153"/>

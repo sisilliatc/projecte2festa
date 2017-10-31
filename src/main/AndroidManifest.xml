@@ -61,15 +61,45 @@
         </activity>
         <activity
             android:name=".About"
-            android:label="History"
+            android:label="About"
             android:parentActivityName=".MainMenu" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainMenu" />
         </activity>
-        <activity android:name=".workoutsugesstion" />
-        <activity android:name=".HealthAnalyzer" />
-        <activity android:name=".HeartPulseMonitoring" />
+
+        <activity
+            android:name=".workoutsugesstion"
+            android:label="Workout Sugesstion"
+            android:parentActivityName=".MyCondition">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyCondition" />
+
+        </activity>
+
+
+
+        <activity
+            android:name=".HealthAnalyzer"
+            android:label="Health Analyzer"
+            android:parentActivityName=".MyCondition">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyCondition" />
+        </activity>
+
+        <activity
+            android:name=".HeartPulseMonitoring"
+            android:label="Heart Pulse Monitoring"
+            android:parentActivityName=".MyCondition">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyCondition" />
+        </activity>
         <activity android:name=".NearestNeighbour" >
         </activity>
     </application>
