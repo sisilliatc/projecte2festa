@@ -34,14 +34,24 @@ public class MainMenu extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         final TextView poin = (TextView) findViewById(R.id.poin);
+        final TextView tegangan = (TextView) findViewById(R.id.tegangan);
 
-        mRef = FirebaseDatabase.getInstance().getReference().child("ricky").child("point");
+
+        mRef = FirebaseDatabase.getInstance().getReference().child("tegangan");
+
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                poin.setText(value);
+                Long value = dataSnapshot.getValue(Long.class);
+                tegangan.setText(Float.toString(value));
+
+                if (value>5){
+                    poin.setText("15");
+                }
+                else if (value>10){
+                    poin.setText("25");
+                }
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
