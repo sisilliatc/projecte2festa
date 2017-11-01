@@ -56,7 +56,6 @@ public class Register extends Activity implements
      EditText mDHistory;
      EditText mRage;
      EditText mPass;
-     EditText mPass1;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -73,7 +72,6 @@ public class Register extends Activity implements
         mRage = (EditText)findViewById(R.id.field_Rage);
         mRgender = (EditText) findViewById(R.id.field_gender);
         mPass = (EditText)findViewById(R.id.field_Rpass);
-        mPass1 = (EditText)findViewById(R.id.field_Rpass1);
         mSmoker = (EditText) findViewById(R.id.smoker);
         mDHistory = (EditText) findViewById(R.id.diseasehistory);
 
