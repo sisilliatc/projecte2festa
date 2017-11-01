@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:drawableLeft="@drawable/user"
-            android:hint="Username"
+            android:hint="Email"
             android:textStyle="bold"
             android:textColorHint="#ffffff"
             android:background="@drawable/edittextstyle"

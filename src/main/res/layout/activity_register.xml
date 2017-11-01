@@ -10,7 +10,7 @@
 
     <android.support.v4.widget.Space
         android:layout_width="wrap_content"
-        android:layout_height="455px" />
+        android:layout_height="445px" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:paddingTop="5dp">
 
         <EditText
-            android:layout_width="490px"
+            android:layout_width="580px"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="Username"
@@ -45,7 +45,7 @@
         android:paddingTop="5dp">
 
         <EditText
-            android:layout_width="490px"
+            android:layout_width="580px"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="Email"
@@ -70,7 +70,32 @@
         android:paddingTop="5dp">
 
         <EditText
-            android:layout_width="490px"
+            android:layout_width="580px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Smoker (yes or no)"
+            android:textColorHint="#ffff"
+            android:background="@drawable/edittextstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:id="@+id/smoker"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="580px"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint="Age"
@@ -95,10 +120,10 @@
         android:paddingTop="5dp">
 
         <EditText
-            android:layout_width="490px"
+            android:layout_width="580px"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Gender (1=male, 0=female)"
+            android:inputType="textPersonName"
+            android:hint="Gender (male or female)"
             android:textColorHint="#ffff"
             android:background="@drawable/edittextstyle"
             android:paddingBottom="10dp"
@@ -112,7 +137,34 @@
 
     </LinearLayout>
 
-   <LinearLayout
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:layout_width="580px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="History of heart disease(yes or no)"
+            android:textColorHint="#ffff"
+            android:background="@drawable/edittextstyle"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:id="@+id/diseasehistory"
+            android:textColor="#E1FFFF"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:gravity="center"
@@ -120,7 +172,7 @@
        android:paddingTop="5dp">
 
        <EditText
-           android:layout_width="490px"
+           android:layout_width="580px"
            android:layout_height="wrap_content"
            android:inputType="textPassword"
            android:ems="10"
@@ -145,7 +197,7 @@
        android:paddingTop="5dp">
 
        <EditText
-           android:layout_width="490px"
+           android:layout_width="580px"
            android:layout_height="wrap_content"
            android:inputType="textPassword"
            android:ems="10"
@@ -167,11 +219,11 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:gravity="center"
-       android:paddingTop="10dp"
-       android:paddingBottom="16dp">
+       android:paddingTop="6dp"
+       android:paddingBottom="10dp">
 
        <Button
-           android:layout_width="210dp"
+           android:layout_width="290dp"
            android:layout_height="40dp"
            android:textStyle="bold"
            android:textAlignment="center"

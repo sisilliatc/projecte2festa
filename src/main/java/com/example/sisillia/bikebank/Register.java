@@ -52,6 +52,8 @@ public class Register extends Activity implements
      EditText mRusename;
      EditText mRemail;
      EditText mRgender;
+     EditText mSmoker;
+     EditText mDHistory;
      EditText mRage;
      EditText mPass;
      EditText mPass1;
@@ -72,6 +74,8 @@ public class Register extends Activity implements
         mRgender = (EditText) findViewById(R.id.field_gender);
         mPass = (EditText)findViewById(R.id.field_Rpass);
         mPass1 = (EditText)findViewById(R.id.field_Rpass1);
+        mSmoker = (EditText) findViewById(R.id.smoker);
+        mDHistory = (EditText) findViewById(R.id.diseasehistory);
 
         // Buttons
         findViewById(R.id.regis).setOnClickListener(this);
