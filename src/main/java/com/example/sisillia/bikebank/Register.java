@@ -33,8 +33,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 //import com.google.firebase.quickstart.database.models.User;
 //import com.google.firebase.quickstart.database.models.Comment;
@@ -82,6 +84,8 @@ public class Register extends Activity implements
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
 //    mDatabase.child(ricky).addValueEventListener(new ValueEventListener() {
@@ -110,7 +114,7 @@ public class Register extends Activity implements
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            addUserInformation(task.getResult().getUser().getUid());
                             Toast.makeText(Register.this, "Create User Success.",
                                     Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(Register.this, MainActivity.class);
@@ -127,87 +131,26 @@ public class Register extends Activity implements
         // [END create_user_with_email]
     }
 
-//    private void signIn(String email, String password) {
-//        Log.d(TAG, "signIn:" + email);
-////        if (!validateForm()) {
-////            return;
-////        }
-//        // [START sign_in_with_email]
-//        mAuth.signInWithEmailAndPassword(email, password)
-//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if (task.isSuccessful()) {
-//                            // Sign in success, update UI with the signed-in user's information
-//                            Log.d(TAG, "signInWithEmail:success");
-//                            FirebaseUser user = mAuth.getCurrentUser();
-//                        } else {
-//                            // If sign in fails, display a message to the user.
-//                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-//                            Toast.makeText(Register.this, "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
-//        // [END sign_in_with_email]
-//    }
-//
-//    private void signOut() {
-//        mAuth.signOut();
-//    }
+    private void addUserInformation(String Uid) {
+        String username = mRusename.getText().toString().trim();
+        Boolean smoker = mSmoker.getText().toString().trim().equalsIgnoreCase("yes") ? true:false;
+        String email = mRemail.getText().toString().trim();
+        Integer age = Integer.parseInt(mRage.getText().toString().trim());
+        String gender = mRgender.getText().toString().trim();
+        Boolean dhistory = mDHistory.getText().toString().trim().equalsIgnoreCase("yes") ? true:false;
 
-//    private void sendEmailVerification() {
-//        // Disable button
-//        findViewById(R.id.verify_email_button).setEnabled(false);
-//
-//        // Send verification email
-//        // [START send_email_verification]
-//        final FirebaseUser user = mAuth.getCurrentUser();
-//        user.sendEmailVerification()
-//                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        // [START_EXCLUDE]
-//                        // Re-enable button
-//                        findViewById(R.id.verify_email_button).setEnabled(true);
-//
-//                        if (task.isSuccessful()) {
-//                            Toast.makeText(EmailPasswordActivity.this,
-//                                    "Verification email sent to " + user.getEmail(),
-//                                    Toast.LENGTH_SHORT).show();
-//                        } else {
-//                            Log.e(TAG, "sendEmailVerification", task.getException());
-//                            Toast.makeText(EmailPasswordActivity.this,
-//                                    "Failed to send verification email.",
-//                                    Toast.LENGTH_SHORT).show();
-//                        }
-//                        // [END_EXCLUDE]
-//                    }
-//                });
-//        // [END send_email_verification]
-//    }
+        HashMap<String,Object> data = new HashMap<>();
+        data.put("username",username);
+        data.put("age",age);
+        data.put("gender",gender);
+        data.put("email",email);
+        data.put("heart_disease",dhistory);
+        data.put("smoker",smoker);
 
-//    private boolean validateForm() {
-//        boolean valid = true;
-//
-//        String email = mRemail.getText().toString();
-//        if (TextUtils.isEmpty(email)) {
-//            mRemail.setError("Required.");
-//            valid = false;
-//        } else {
-//            mRemail.setError(null);
-//        }
-//
-//        String password = mPass.getText().toString();
-//        if (TextUtils.isEmpty(password)) {
-//            mPass.setError("Required.");
-//            valid = false;
-//        } else {
-//            mPass.setError(null);
-//        }
-//
-//        return valid;
-//    }
+        mDatabase.child("users").child(Uid).setValue(data);
+
+    }
+
 
     @Override
     public void onClick(View v) {
