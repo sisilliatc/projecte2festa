@@ -7,6 +7,8 @@ import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Splashscreen extends Activity {
 
     private static int splashInterval = 2000;
@@ -26,9 +28,15 @@ public class Splashscreen extends Activity {
             @Override
             public void run() {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(Splashscreen.this, MainActivity.class);
-                startActivity(i); // menghubungkan activity splashscren ke main activity dengan intent
+                if(FirebaseAuth.getInstance() != null){
+                    Intent i = new Intent(Splashscreen.this, MainMenu.class);
+                    startActivity(i); // menghubungkan activity splashscren ke main activity dengan intent
+                }
+                else{
+                    Intent i = new Intent(Splashscreen.this, MainActivity.class);
+                    startActivity(i); // menghubungkan activity splashscren ke main activity dengan intent
 
+                }
 
                 //jeda selesai Splashscreen
                 this.finish();

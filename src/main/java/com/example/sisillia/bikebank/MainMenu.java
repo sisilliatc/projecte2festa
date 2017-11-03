@@ -2,6 +2,7 @@ package com.example.sisillia.bikebank;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -19,8 +22,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainMenu extends AppCompatActivity
+
         implements NavigationView.OnNavigationItemSelectedListener {
-    private DatabaseReference mRef;
+        private DatabaseReference mRef;
+        private FirebaseAuth mAuth;
+        private FirebaseAuth.AuthStateListener authListener;
+
 
 
     @Override
@@ -28,6 +35,20 @@ public class MainMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        mAuth = FirebaseAuth.getInstance();
+
+        authListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user == null) {
+                    // user auth state is changed - user is null
+                    // launch login activity
+                    startActivity(new Intent(MainMenu.this, MainActivity.class));
+                    finish();
+                }
+            }
+        };
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -141,9 +162,31 @@ public class MainMenu extends AppCompatActivity
             MainMenu.this.startActivity(intent);
 
         }
+        else if (id == R.id.logut){
+            signOut();
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    //sign out method
+    public void signOut() {
+        mAuth.signOut();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(authListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (authListener != null) {
+            mAuth.removeAuthStateListener(authListener);
+        }
     }
 }

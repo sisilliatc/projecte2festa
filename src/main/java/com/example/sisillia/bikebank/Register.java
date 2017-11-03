@@ -139,6 +139,7 @@ public class Register extends Activity implements
         String gender = mRgender.getText().toString().trim();
         Boolean dhistory = mDHistory.getText().toString().trim().equalsIgnoreCase("yes") ? true:false;
 
+
         HashMap<String,Object> data = new HashMap<>();
         data.put("username",username);
         data.put("age",age);
@@ -146,6 +147,9 @@ public class Register extends Activity implements
         data.put("email",email);
         data.put("heart_disease",dhistory);
         data.put("smoker",smoker);
+
+
+
 
         mDatabase.child("users").child(Uid).setValue(data);
 

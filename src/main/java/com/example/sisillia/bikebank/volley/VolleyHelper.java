@@ -25,28 +25,31 @@ public class VolleyHelper {
     public static final String TAG = AppController.class
             .getSimpleName();
 
-    public void getSakit(final VolleyCallback callback, String latitude, String longitude) throws JSONException {
+    public void getSakit(final VolleyCallback callback, int smoker, int umur, int gender, int history) throws JSONException {
         // Tag used to cancel the request
         String tag_json_obj = "json_obj_req";
 
         Log.d("volley","jalan");
 
-        String url = "https://api.agri.gravicodev.id/panen/get?kw=350901";
+        String url = "https://flask.gravicodev.id/proses";
 
         JSONObject requestJSON = new JSONObject();
-        requestJSON.put("method","getATM");
-        requestJSON.put("Latitude",""+latitude);
-        requestJSON.put("Longitude",""+longitude);
+
+        requestJSON.put("smoker",0);
+
+        requestJSON.put("umur", 0);
+        requestJSON.put("gender", 0);
+        requestJSON.put("history", 0);
 
         final String requestBody = requestJSON.toString();
 
         JsonObjectRequest request = new JsonObjectRequest(
-                Request.Method.GET, url, null,
+                Request.Method.POST, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         //...
-                        callback.onSuccess(response.toString());
+                        callback.onSuccess(response);
                     }
                 },
                 new Response.ErrorListener() {
