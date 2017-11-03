@@ -1,5 +1,7 @@
 package com.example.sisillia.bikebank.volley;
 
+import android.util.Log;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -27,7 +29,9 @@ public class VolleyHelper {
         // Tag used to cancel the request
         String tag_json_obj = "json_obj_req";
 
-        String url = "http://finhacks.gravicodev.id/index.php";
+        Log.d("volley","jalan");
+
+        String url = "https://api.agri.gravicodev.id/panen/get?kw=350901";
 
         JSONObject requestJSON = new JSONObject();
         requestJSON.put("method","getATM");
@@ -37,7 +41,7 @@ public class VolleyHelper {
         final String requestBody = requestJSON.toString();
 
         JsonObjectRequest request = new JsonObjectRequest(
-                Request.Method.POST, url, null,
+                Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -71,6 +75,35 @@ public class VolleyHelper {
                 }
             }
         };
+
+        request.setRetryPolicy(new DefaultRetryPolicy(10000,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+// Adding request to request queue
+        AppController.getInstance().addToRequestQueue(request, tag_json_obj);
+    }
+
+    public void getSakit2(final VolleyCallback callback, String latitude, String longitude) throws JSONException {
+        // Tag used to cancel the request
+        String tag_json_obj = "json_obj_req";
+
+        Log.d("volley","jalan");
+
+        String url = "https://api.agri.gravicodev.id/panen/get?kw=350901";
+
+        JsonObjectRequest request = new JsonObjectRequest
+                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        callback.onSuccess(response);
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // TODO Auto-generated method stub
+
+                    }
+                });
 
         request.setRetryPolicy(new DefaultRetryPolicy(10000,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
 // Adding request to request queue

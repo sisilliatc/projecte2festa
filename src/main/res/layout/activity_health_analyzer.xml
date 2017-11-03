@@ -98,17 +98,17 @@
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="70dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(No Witdraw)"
+                android:text="0"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="80dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -134,17 +134,17 @@
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="70dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(No Witdraw)"
+                android:text="0"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="80dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -171,17 +171,17 @@
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="70dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(No Witdraw)"
+                android:text="0"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="80dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -232,9 +232,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From your workout you should ...."
+            android:text="From your workout you should do workout :"
             android:textSize="16dp"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result"
+            android:textSize="16dp"
+            />
+
 
     </TableLayout>
 

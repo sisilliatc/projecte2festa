@@ -4,7 +4,7 @@
     android:id="@+id/activity_splashscreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splashscreen"
+    android:background="@drawable/splashscreenmycycle"
     tools:context="com.example.sisillia.bikebank.Splashscreen">
 
 </RelativeLayout>
