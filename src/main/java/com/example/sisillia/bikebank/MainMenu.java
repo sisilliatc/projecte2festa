@@ -25,10 +25,11 @@ public class MainMenu extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener {
         private DatabaseReference mRef;
+        private DatabaseReference mRef2;
         private FirebaseAuth mAuth;
         private FirebaseAuth.AuthStateListener authListener;
-
-
+    Long tampung=0L;
+    Long total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,29 +51,75 @@ public class MainMenu extends AppCompatActivity
             }
         };
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         final TextView poin = (TextView) findViewById(R.id.poin);
+        final TextView level = (TextView) findViewById(R.id.level);
         final TextView tegangan = (TextView) findViewById(R.id.tegangan);
+        final TextView detak = (TextView) findViewById(R.id.detak);
+        final TextView cal = (TextView) findViewById(R.id.cal1);
+        final TextView dis = (TextView) findViewById(R.id.dis1);
+        final TextView spe1 = (TextView) findViewById(R.id.speed1);
 
 
         mRef = FirebaseDatabase.getInstance().getReference().child("tegangan");
-
-
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Long value = dataSnapshot.getValue(Long.class);
                 tegangan.setText(Float.toString(value));
+                total = tampung + value;
+                tampung=total;
 
-                if (value>5){
-                    poin.setText("15");
+                //Newbie
+                        //Novice
+                //Rookie
+                        //Beginner
+                //Talented
+                        //Skilled
+                //Intermediate
+                        //Skillful
+                //Seasoned
+                        //Proficient
+                //Experienced
+                        //Advanced
+                //Senior
+                        //Expert
+
+                level.setText(Float.toString(total));
+
+                if (total>10){
+                    poin.setText("1");
                 }
-                else if (value>10){
-                    poin.setText("25");
+                else if (total>20){
+                    poin.setText("2");
                 }
+                if (total>30){
+                    poin.setText("3");
+                }
+                else if (total>40){
+                    poin.setText("4");
+                }
+                //
+
+                cal.setText(Float.toString(value));
+
+                spe1.setText(Float.toString(value));
+
+                dis.setText(Float.toString(value));
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+        mRef2 = FirebaseDatabase.getInstance().getReference().child("detak");
+        mRef2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Long value2 = dataSnapshot.getValue(Long.class);
+                detak.setText(Float.toString(value2));
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -88,17 +135,7 @@ public class MainMenu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        VolleyHelper vh = new VolleyHelper();
-//        try {
-//            vh.getSakit(new VolleyCallback() {
-//                @Override
-//                public void onSuccess(String result) {
-//                    Log.d("volley sisil",result);
-//                }
-//            },"a","b");
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
+
     }
 
 

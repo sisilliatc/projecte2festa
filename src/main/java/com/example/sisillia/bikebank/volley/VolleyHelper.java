@@ -25,7 +25,7 @@ public class VolleyHelper {
     public static final String TAG = AppController.class
             .getSimpleName();
 
-    public void getSakit(final VolleyCallback callback, int smoker, int umur, int gender, int history) throws JSONException {
+    public void getSakit(final VolleyCallback callback, int smoker, float umur, int gender, int history) throws JSONException {
         // Tag used to cancel the request
         String tag_json_obj = "json_obj_req";
 
@@ -35,11 +35,11 @@ public class VolleyHelper {
 
         JSONObject requestJSON = new JSONObject();
 
-        requestJSON.put("smoker",0);
+        requestJSON.put("smoker",smoker);
 
-        requestJSON.put("umur", 0);
-        requestJSON.put("gender", 0);
-        requestJSON.put("history", 0);
+        requestJSON.put("umur", umur);
+        requestJSON.put("gender", gender);
+        requestJSON.put("history", history);
 
         final String requestBody = requestJSON.toString();
 
