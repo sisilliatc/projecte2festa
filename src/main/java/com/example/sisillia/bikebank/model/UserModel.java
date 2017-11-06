@@ -56,4 +56,8 @@ public class UserModel {
             return 0;
         }
     }
+
+    public String getUsername(){
+        return this.username;
+    }
 }

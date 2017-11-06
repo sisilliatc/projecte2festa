@@ -26,6 +26,7 @@ public class MainMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
         private DatabaseReference mRef;
         private DatabaseReference mRef2;
+        private DatabaseReference mRef3;
         private FirebaseAuth mAuth;
         private FirebaseAuth.AuthStateListener authListener;
     Long tampung=0L;
@@ -61,6 +62,7 @@ public class MainMenu extends AppCompatActivity
         final TextView cal = (TextView) findViewById(R.id.cal1);
         final TextView dis = (TextView) findViewById(R.id.dis1);
         final TextView spe1 = (TextView) findViewById(R.id.speed1);
+        final TextView uname = (TextView) findViewById(R.id.nama);
 
 
         mRef = FirebaseDatabase.getInstance().getReference().child("tegangan");
@@ -125,6 +127,35 @@ public class MainMenu extends AppCompatActivity
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+
+//        mRef3 = FirebaseDatabase.getInstance().getReference().child("users");
+//
+//
+////        mRef3 = FirebaseDatabase.getInstance().getReference("users").child("username");
+//        mRef3.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+////                String value3 = dataSnapshot.getValue(String.class);
+//////                uname.setText(value3);
+////
+////                uname.setText(String.valueOf(value3));
+//
+//
+//
+//                UserModel userModel = dataSnapshot.getValue(UserModel.class);
+//                String namauser = userModel.getUsername();
+//                uname.setText(namauser);
+//
+////                ((TextView)findViewById(R.id.nama)).setText(userModel.getUsername());
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
+//
+//
 
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

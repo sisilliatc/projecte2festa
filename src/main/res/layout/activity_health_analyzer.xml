@@ -71,7 +71,7 @@
                 android:textColor="#050303"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="55dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -187,7 +187,7 @@
         <com.jjoe64.graphview.GraphView
             android:layout_width="match_parent"
             android:layout_height="115dp"
-            android:id="@+id/graph"/>
+            android:id="@+id/graph1"/>
 
     </TableLayout>
 

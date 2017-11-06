@@ -30,7 +30,7 @@ public class workoutsugesstion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workoutsugesstion);
 
-        result = (TextView) findViewById(R.id.resultWorkOut);
+
         hasil = (TextView) findViewById(R.id.cobalah);
 
         final VolleyHelper vh = new VolleyHelper();

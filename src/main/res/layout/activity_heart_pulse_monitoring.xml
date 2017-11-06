@@ -16,8 +16,8 @@
         android:layout_height="480dp"
         android:orientation="horizontal"
         android:paddingTop="10dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:paddingBottom="10dp">
         <TextView
             android:layout_width="wrap_content"
@@ -39,8 +39,8 @@
 
         <com.jjoe64.graphview.GraphView
             android:layout_width="match_parent"
-            android:layout_height="210dp"
-            android:id="@+id/graphheart"/>
+            android:layout_height="230dp"
+            android:id="@+id/graphpulse"/>
 
     </TableLayout>
 
