@@ -80,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date/Time"
+                android:textColor="#050303"
                 android:textSize="15dp"
                 android:textStyle="bold"/>
 
@@ -91,6 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Watt"
+                android:textColor="#050303"
                 android:textSize="15dp"
                 android:textStyle="bold"/>
 
@@ -101,6 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#050303"
                 android:text="Exercise Time"
                 android:textSize="15dp"
                 android:textStyle="bold"/>
@@ -114,12 +117,14 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:paddingLeft="16dp"
+
         android:paddingRight="16dp">
 
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#050303"
                 android:text="24/06/2017"
                 android:textSize="15dp"/>
 
@@ -131,6 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="   10 Watt  "
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -141,6 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="01:25:30"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
         </TableRow>
     </TableLayout>
@@ -159,6 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/06/2017"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -169,6 +177,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="150 Watt  "
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -179,6 +188,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="01:00:30"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
         </TableRow>
@@ -199,6 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/06/2017"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -209,6 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="   50 Watt  "
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -219,6 +231,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:25:30"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
         </TableRow>

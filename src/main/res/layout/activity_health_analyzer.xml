@@ -55,7 +55,8 @@
                 android:layout_height="wrap_content"
                 android:text="Date/Time"
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="#050303"/>
 
             <android.support.v4.widget.Space
                 android:layout_width="70dp"
@@ -66,10 +67,11 @@
                 android:layout_height="wrap_content"
                 android:text="Withdrawal"
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="#050303"/>
 
             <android.support.v4.widget.Space
-                android:layout_width="70dp"
+                android:layout_width="55dp"
                 android:layout_height="wrap_content" />
 
             <TextView
@@ -77,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="Balance"
                 android:textSize="15dp"
+                android:textColor="#050303"
                 android:textStyle="bold"/>
 
         </TableRow>
@@ -88,13 +91,15 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:paddingRight="16dp"
-        android:paddingLeft="16dp">
+        android:paddingLeft="16dp"
+        >
 
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="24/06/2017"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -105,6 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -115,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="500"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
         </TableRow>
     </TableLayout>
@@ -131,6 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="27/07/2017"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -141,6 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
 
             <android.support.v4.widget.Space
@@ -151,6 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="900"
+                android:textColor="#050303"
                 android:textSize="15dp"/>
         </TableRow>
     </TableLayout>
@@ -164,15 +174,15 @@
     android:paddingTop="10dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingBottom="2dp">
+    android:paddingBottom="5dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Records"
+        android:textColor="#050303"
         android:textSize="20dp"
         android:textStyle="bold"/>
-
 
         <com.jjoe64.graphview.GraphView
             android:layout_width="match_parent"
@@ -195,19 +205,20 @@
         android:layout_height="wrap_content"
         android:text="Assistance Analyzer"
         android:textSize="20dp"
+            android:textColor="#050303"
         android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="From your workout you should do workout :"
             android:textSize="16dp"
+            android:textColor="#050303"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/result"
-            android:textSize="16dp"
-            />
+            android:textSize="16dp" />
 
     </TableLayout>
 
