@@ -18,7 +18,7 @@
        <ImageView
            android:layout_width="90dp"
            android:layout_height="90dp"
-           android:src="@mipmap/ic_launcher"/>
+           android:src="@drawable/teampict"/>
         <android.support.v4.widget.Space
             android:layout_width="wrap_content"
             android:layout_height="20dp" />
@@ -44,8 +44,9 @@
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sisilliait14@gmail.com"
+        android:text=""
         android:textSize="17dp"
+            android:id="@+id/email"
         android:textStyle="bold"
         android:textColor="#fff"/>
 
@@ -53,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="081924568976"
+            android:id="@+id/gender"
             android:textSize="16dp"
             android:textStyle="bold"
             android:textColor="#fff"/>
@@ -61,18 +63,62 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
         android:paddingRight="16dp"
      >
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ubah Kata Sandi"
-            android:textSize="16dp"/>
+            android:text="status"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#050303"/>
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="available"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Display Name"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#050303"/>
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/namaid"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="@color/colorPrimary"/>
 
     </LinearLayout>
 
@@ -83,32 +129,14 @@
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
         android:paddingRight="16dp"
-
         >
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ketentuan Layanan"
-            android:textSize="16dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp"
-
-        >
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Kebijakan Privasi"
-            android:textSize="16dp"/>
+            android:text="Change Password"
+            android:textSize="16dp"
+            android:textColor="#050303"/>
 
     </LinearLayout>
 

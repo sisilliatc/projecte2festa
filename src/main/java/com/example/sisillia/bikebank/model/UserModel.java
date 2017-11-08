@@ -58,6 +58,11 @@ public class UserModel {
     }
 
     public String getUsername(){
+
         return this.username;
+    }
+
+    public String getEmail(){
+        return  this.email;
     }
 }

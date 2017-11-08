@@ -26,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100 Poin"
+            android:id="@+id/total_point2"
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="#fff"/>
@@ -98,7 +99,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="24/06/2017"
+                android:text="09/11/2017"
                 android:textColor="#050303"
                 android:textSize="15dp"/>
 
@@ -120,7 +121,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="500"
+                android:text="20"
                 android:textColor="#050303"
                 android:textSize="15dp"/>
         </TableRow>
@@ -137,7 +138,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27/07/2017"
+                android:text="09/11/2017"
                 android:textColor="#050303"
                 android:textSize="15dp"/>
 
@@ -159,7 +160,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="900"
+                android:text="40"
                 android:textColor="#050303"
                 android:textSize="15dp"/>
         </TableRow>
@@ -210,7 +211,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From your workout you should do workout :"
+            android:text="From your workout you look have a good progress. Check your heart pulse monitoring to make sure that you are okay"
             android:textSize="16dp"
             android:textColor="#050303"
             />
